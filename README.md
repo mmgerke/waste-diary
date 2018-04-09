@@ -1,4 +1,6 @@
-# [Start Bootstrap - Full](https://startbootstrap.com/template-overviews/full/)
+# [Waste Diary](https://prism.gatech.edu/~mgerke3)
+
+## (The following needs to be updated for the project from the template)
 
 [Full](http://startbootstrap.com/template-overviews/full/) is full page background image HTML starter template for [Bootstrap](http://getbootstrap.com/) created by [Start Bootstrap](http://startbootstrap.com/).
 
