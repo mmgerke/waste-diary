@@ -2,7 +2,8 @@ $(document).ready(function() {
 	window.setTimeout(function() { 
 		$('[data-toggle="tooltip"]').tooltip();
 		tooltip('#blue_4_', 'yogurt.jpg');
-		
+		tooltip('#blue_8_', 'plastic_bottle.jpg');
+
 	}, 5500);
 });
 
