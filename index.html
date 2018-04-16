@@ -13,14 +13,19 @@
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Custom styles for this template -->
-    <link href="css/full.css" rel="stylesheet">
-
     <!-- Custom Fonts -->
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
+    <!-- Custom styles for this template -->
+    <link href="css/full.css" rel="stylesheet" type="text/css">
+
+    <!-- Custom styles for this template -->
+    <link href="css/planting.css" rel="stylesheet" type="text/css">
+
     <!-- Timeline events file -->
     <link rel="import" href="events.html">
+
+    <link rel="import" href="planting.svg">
 
   </head>
 
@@ -102,14 +107,15 @@
     <section id="flower" class="py-5" style="background-color:#FFFFFF">
       <div class="container">
         <h1>My planting week</h1>
-        <img src="flower_graph.svg"></div>
+        <!-- <object id="flower_graph" type="image/svg+xml" data="planting.svg"></object> -->
+        <div id="flower_graph"></div>
       </div>
     </section>
 
     <section id="action" class="py-5" style="background-color:#F7DC6F;">
       <div class="container">
         <h1>Thought to action?</h1>
-        <p>Even action is driven from thought, thought cannot solve the problem but action does! Want to know more about the current status of the trash recycling in United State and wonder how you could lend a hand? You can do much more you would imagine. Please take a look on this infographic made by EPA - United States Environmental Protection Agency: <a style="text-decoration:underline;" href="https://www.epa.gov/smm/infographic-about-municipal-solid-waste-msw-united-states-2014">"Together, we can make a difference."</a></p>
+        <p>Even action is driven from thought, thought cannot solve the problem but action does! Want to know more about the current status of the trash recycling in United State and wonder how you could lend a hand? You can do much more you would imagine. Please take a look on this infographic made by EPA - United States Environmental Protection Agency: <a style="text-decoration:underline;" href="https://www.epa.gov/smm/infographic-about-municipal-solid-waste-msw-united-states-2014" target="_blank">"Together, we can make a difference."</a></p>
       </div>
     </section>
 
@@ -124,7 +130,10 @@
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="vendor/planting.js"></script>
     <script>$("#timelineEvents").load("events.html");</script>
+    <script>$("#flower_graph").load("planting.svg");</script>
 
   </body>
 

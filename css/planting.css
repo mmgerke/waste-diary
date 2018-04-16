@@ -1,0 +1,16 @@
+.tooltip {
+  opacity: 1 !important;
+}
+.tooltip > .tooltip-inner {
+  padding: 10px;
+  max-width: 230px;
+  color: black;
+  font-size: 16px;
+  text-align: left;
+  background: white;
+  border: 1px solid black;
+
+   
+  opacity: 1.0;
+  filter: alpha(opacity=100);
+} 
