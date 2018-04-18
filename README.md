@@ -5,6 +5,7 @@
 To download for editing:
 * Clone the repo: `git clone https://github.com/mmgerke/waste-diary.git` or [Fork, Clone, or Download on GitHub](https://github.com/mmgerke/waste-diary.git)
 * Install npm: `npm install`
+** Install d3: `npm install d3`
 
 ## Usage
 
