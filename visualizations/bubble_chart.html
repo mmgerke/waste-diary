@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<div class="chart-example" id="chart"></div>
+
+<script src="https://d3js.org/d3.v5.min.js"></script>
+<script src="../vendor/jquery/jquery.min.js"></script>
+<script src="bubble_chart.js"></script>
+<script>
+
+	var getCsv = function (csvUrl) {
+	    var defer = $.Deferred();
+	    d3.csv(csvUrl, function (error, rows) {
+	        if (error) {
+	            defer.reject(error);
+	        }
+	        defer.resolve(rows);
+	    });
+	    return defer.promise();
+	};
+
+	$.when(
+	    getCsv('grouped_data.csv') // please pass csv url
+	).done(function (data) {
+	    //console.log(data[0]);
+	    data.forEach(function(d) {
+     		d.Count = +d.Count;
+     	});
+	    var chart = bubbleChart().width(600).height(400);
+      	d3.select('#chart').datum(data).call(chart);
+	}).fail(function (err) {
+	    console.log(err);
+	});
+
+	// d3.csv('visualizations/grouped_data.csv').then(function(error, data) {
+ //      	if (error) {
+ //          console.error('Error getting or parsing the data.');
+ //          //throw error;
+ //     	}
+     	
+
+ //     	var chart = bubbleChart().width(600).height(400);
+ //      	// selection.datum() returns the bound datum for the first element in the selection and doesn't join the specified array of data with the selected elements
+ //      	d3.select('#bubble_chart').datum(data).call(chart);
+ //    });
+
+
+</script>
