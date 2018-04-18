@@ -161,25 +161,25 @@ body {
   border-left-width: 0;
 }
 .timeline-badge.trash {
-  background-color: #1C2833 !important;
+  background-color: #FFDD55 !important;
 }
 .timeline-badge.aluminum {
-  background-color: #F5B041 !important;
+  background-color: #FF00AF !important;
 }
 .timeline-badge.compost {
-  background-color: #27AE60 !important;
+  background-color: #820080 !important;
 }
 .timeline-badge.plastic {
-  background-color: #85C1E9 !important;
+  background-color: #00ACFF !important;
 }
 .timeline-badge.cardboard {
-  background-color: #F5B041 !important;
+  background-color: #FF0000 !important;
 }
 .timeline-badge.glass {
-  background-color: #d9534f !important;
+  background-color: #00BD00 !important;
 }
 .timeline-badge.paper {
-  background-color: #F7DC6F !important;
+  background-color: #FF6600 !important;
 }
 .timeline-title {
   margin-top: 0;

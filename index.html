@@ -24,9 +24,8 @@
 
     <!-- Timeline events file -->
     <link rel="import" href="events.html">
-    <link rel="import" href="visualizations/bubble_chart.html">
-
     <link rel="import" href="planting.svg">
+    <link rel="import" href="dots.svg">
 
   </head>
 
@@ -49,10 +48,10 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#timeline">Timeline</a>
+              <a class="nav-link" href="#breakdown-graph">Distribution</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#breakdown-graph">Distribution</a>
+              <a class="nav-link" href="#timeline">Timeline</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#stories">Stories</a>
@@ -74,42 +73,48 @@
     <section  id="introduction" class="py-5">
       <div class="container">
         <h1>Introduction</h1>
-        <p>Nowadays, we keep hearing about how bad the current state of the environment is: the global warming, the massive death of animals, air pollution and so on. The encouragement about using reused item or the recylable material gets spreaded more widely and widely. Although we have been informed a lot about this issues from the big scale level, and we thought we had enough motivations to make the world better, we have yet made an action. There is one small piece of information that we have not been discovered. The most realistic information than ever that would strongly change our behavior! Have you ever wondered? How much would a person's daily routine affect the environment? Or in another word, how much trash do you personally produce daily? Is it as you expect it?</p>
-        <h5>Yes, we did wonder and we was <strong>surprised!</strong></h5>
-        <p>Each of us conducted a small data collection of how much trash we would produce for a week. The purpose of this experiment is to help us gain cognition of our daily routined related to trash production and the effect of our trash contribution to the environment.
+        <p>Nowadays, we keep hearing about how bad the current state of the environment is: global warming, the massive death of animals, air pollution and so on. The encouragement about reusing items or recylable materials has spread. Although we have been informed a lot about this issues on a large scale, and we thought we had enough motivation to make the world better, we have yet to act. There is one small piece of information that has not been discovered. The most realistic information than ever that would strongly change our behavior! Have you ever wondered? How much would a person's daily routine affect the environment? Or in another word, how much trash do you personally produce daily? Is it as much as you expect?</p>
+        <h5>Yes, we did wonder and we were <strong>surprised!</strong></h5>
+        <p>Each of us collected data of how much trash we produce for a week. The purpose of this experiment was to help us realize how much our daily routined produced trash and the effect of our trash contribution to the environment.
         </p>
-        <p>Everytime we discard something, we took a picture and note about it. The information was what the item was, what it was made of, the discarded time, if it was recycled, and side note about why we used it. Each of us could took some other aspects into account regarding to our personal lives. For example, Maura differentiated the trash produced by her cat and herself; while Phuc focused on the amount of individual trash and if she did recycle it or not. The trash was categorized into 7 types: plastic, cardboard, paper, glass, aluminum, compost and trash.</p>
+        <p>Everytime we discarded something, we took a picture and note about it. The information was what the item was, what it was made of, the discarded time, if it was recycled, and side note about why we used it. Each of us could took some other aspects into account regarding to our personal lives. For example, Maura differentiated the trash produced by her cat and herself; while Phuc focused on the amount of individual trash and if she did recycle it or not. The trash was categorized into 7 types: plastic, cardboard, paper, glass, aluminum, compost and trash.</p>
+    </section>
+
+    <section id="breakdown-graph" class="py-5">
+      <div class="container">
+        <h1>Total Waste Distribution</h1>
+        <div>
+          These bubbles represent the distribution of materials we disposed of over the week. Most of the waste we produced was non-recylable materials involved in eating or cleaning. This has shown us how much of a change it would make to stop using disposable plates, cups, and silverwear, and instead opt to dine in places.
+        </div>
+        <div id="dots">
+          <div id="bubble_chart"></div>
+        </div>
+      </div>
     </section>
 
     <section  id="timeline" class="py-5">
       <div class="container">
         <h1>A Day in Waste</h1>
-        <div id="dots">
-          <div id="bubble_chart"></div>
-          <img src="https://www.prism.gatech.edu/~mgerke3/images/dots.png" alt="Dots Mockup" height="200px">
+        <div>In a typical day, do you think about everytime you use a trash can? By tracking everything we disposed of over the week, we became much more concious of what we were throwing away. What was more interesting, is that we could track what we were doing throughout the day by when and what we disposed of. Here is Maura's typical day, as told in waste.
         </div>
         <div id="timelineEvents"></div>
       </div>
     </section>
 
-    <section id="breakdown-graph" class="py-5" style="background-color:#85C1E9">
+    <section id="stories" class="py-5">
       <div class="container">
-        <h1>Total Waste Distribution</h1>
-        <iframe height=400 width=600 style="border:none;" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRVvSFLz5wGYMyHJ2r7JebAxaL0MwQbl76NRnQqSwbHfZUMWPqyKWvLuOXSN3csJDU-i73ui0a5xPm2/pubchart?oid=1984678241&amp;format=interactive"></iframe>
-      </div>
-    </section>
-
-    <section id="stories" class="py-5" style="background-color:#F5B041">
-      <div class="container">
-        <h1>Stories</h1>
+        <h1>Human vs. Cat</h1>
+        <div>
+        The biggest thing I didn't expect to learn from this experiment was how much waste taking care of my cat produces. She's old and set in her ways, and eats special prescription food because of a stomach issue. Between the  bag of cat litter every night and two to three cans of wet food a day, she was the cause of a large portion of my waste. When considering your impact on the enviornment, don't forget the impact of those you are resposible for caring for, like your pets.
+        </div>
         <iframe height=400 width=600 style="border:none;" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRVvSFLz5wGYMyHJ2r7JebAxaL0MwQbl76NRnQqSwbHfZUMWPqyKWvLuOXSN3csJDU-i73ui0a5xPm2/pubchart?oid=1949740734&amp;format=interactive"></iframe>
       </div>
     </section>
 
     <section id="flower" class="py-5" style="background-color:#FFFFFF">
       <div class="container">
-        <h1>The effect of a typical week</h1>
-        <p>Each leaf represents a category that coded by color of the dot on the leaf tip. The flower is coded with the same concept by the color of the flower. Each flower represents a item that was put in the recycled bin. Each item which was thrown to trash can is illustrated by a hole on leaf as a caterpillar eats it.</p>
+        <h1>The Effect of a Typical Week</h1>
+        <p>Each leaf represents a category coded by color of the dot on the leaf tip. The flower is coded with the same concept by the color of the flower. Each flower represents a item that was put in the recycled bin. Each item which was thrown to trash can is illustrated by a hole on leaf as a caterpillar eats it.</p>
         <img src="/images/color-code.png" height="130px"></img>
         <!-- <object id="flower_graph" type="image/svg+xml" data="planting.svg"></object> -->
         <div id="flower_graph"></div>
@@ -118,8 +123,8 @@
 
     <section id="action" class="py-5" style="background-color:#F7DC6F;">
       <div class="container">
-        <h1>Thought to action?</h1>
-        <p>Even action is driven from thought, thought cannot solve the problem but action does! Want to know more about the current status of the trash recycling in United State and wonder how you could lend a hand? You can do much more you would imagine. Please take a look on this infographic made by EPA - United States Environmental Protection Agency: <a style="text-decoration:underline;" href="https://www.epa.gov/smm/infographic-about-municipal-solid-waste-msw-united-states-2014" target="_blank">"Together, we can make a difference."</a></p>
+        <h1>Take Action!</h1>
+        <p>Every action is driven from thought, thought cannot solve the problem but action can! Want to know more about the current status of the trash recycling in United State and wonder how you could lend a hand? You can do much more you would imagine. Please take a look on this infographic made by EPA - United States Environmental Protection Agency: <a style="text-decoration:underline;" href="https://www.epa.gov/smm/infographic-about-municipal-solid-waste-msw-united-states-2014" target="_blank">"Together, we can make a difference."</a></p>
       </div>
     </section>
 
@@ -138,6 +143,7 @@
     <script src="vendor/planting.js"></script>
     <script>$("#timelineEvents").load("events.html");</script>
     <script>$("#flower_graph").load("planting.svg");</script>
+    <script>$("#bubble_chart").load("dot_chart.svg");</script>
 
   </body>
 
