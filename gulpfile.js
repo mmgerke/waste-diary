@@ -1,6 +1,19 @@
 var gulp = require('gulp');
 var browserSync = require('browser-sync').create();
 var pkg = require('./package.json');
+var fileinclude = require('gulp-file-include');
+
+const { watch, series, parallel } = require('gulp');
+
+// Used to insert html timeline events into main index page 
+function fileInclude() {
+    return gulp.src(['index.html'])
+      .pipe(fileinclude({
+        prefix: '@@',
+        basepath: '@file'
+      }))
+      .pipe(gulp.dest('./'));
+}
 
 // Copy third party libraries from /node_modules into /vendor
 gulp.task('vendor', function() {
@@ -22,20 +35,19 @@ gulp.task('vendor', function() {
 
 })
 
-// Default task
-gulp.task('default', ['vendor']);
-
 // Configure the browserSync task
-gulp.task('browserSync', function() {
-  browserSync.init({
+function browserSync() {
+  return browserSync.init({
     server: {
       baseDir: "./"
     }
   });
-});
+};
+
+exports.include = fileInclude;
 
 // Dev task
-gulp.task('dev', ['browserSync'], function() {
-  gulp.watch('./css/*.css', browserSync.reload);
-  gulp.watch('./*.html', browserSync.reload);
-});
+exports.dev = function() {
+  watch('./css/*.css', browserSync);
+  watch('./*.html', { ignoreInitial: false }, gulp.series(include, browserSync));
+};
